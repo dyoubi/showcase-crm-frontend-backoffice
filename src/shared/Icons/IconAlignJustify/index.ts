@@ -1,0 +1,1 @@
+export { IconAlignJustify } from './IconAlignJustify';

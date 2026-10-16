@@ -1,0 +1,1 @@
+export { IconDocument } from './IconDocument';

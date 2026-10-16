@@ -1,0 +1,21 @@
+envVars:
+  AUTH_API_URL: https://develop.authentication.egamingchain.io
+  CASINO_API_URL: https://develop.casino.egamingchain.io
+  COINS_API_URL: https://develop.coins.egamingchain.io
+  CUSTOMER_SERVICE_API_URL: https://develop.cs.egamingchain.io
+  FINANCE_API_URL: https://develop.finance.egamingchain.io
+  MEDIA_API_URL: https://develop.media-server.egamingchain.io
+  OPERATOR_API_URL: https://develop.operator.egamingchain.io
+  AUTH_API_CLIENT_ID: egcringoffice
+  AUTH_API_CLIENT_SECRET: <CLIENT_SECRET>
+  CONTENT_API_URL: https://develop.content.egamingchain.io
+
+ingress:
+  hosts:
+    - host: develop.ring-office.egamingchain.io
+      paths:
+        - path: /
+          pathType: Prefix
+
+image:
+  pullPolicy: Always

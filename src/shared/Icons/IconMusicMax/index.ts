@@ -1,0 +1,1 @@
+export { IconMusicMax } from './IconMusicMax';

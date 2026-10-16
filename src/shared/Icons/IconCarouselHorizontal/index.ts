@@ -1,0 +1,1 @@
+export { IconCarouselHorizontal } from './IconCarouselHorizontal';

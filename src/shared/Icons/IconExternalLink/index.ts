@@ -1,0 +1,1 @@
+export { IconExternalLink } from './IconExternalLink';

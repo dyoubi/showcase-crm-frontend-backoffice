@@ -1,0 +1,1 @@
+export { IconDollar } from './IconDollar';

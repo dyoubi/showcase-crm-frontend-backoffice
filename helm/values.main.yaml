@@ -1,0 +1,36 @@
+envVars:
+  AUTH_API_URL: https://main.authentication.egamingchain.io
+  CASINO_API_URL: https://main.casino.egamingchain.io
+  COINS_API_URL: https://main.coins.egamingchain.io
+  CUSTOMER_SERVICE_API_URL: https://develop.cs.egamingchain.io
+  FINANCE_API_URL: https://main.finance.egamingchain.io
+  MEDIA_API_URL: https://main.media-server.egamingchain.io
+  OPERATOR_API_URL: https://main.operator.egamingchain.io
+  AUTH_API_CLIENT_ID: egcringoffice
+  AUTH_API_CLIENT_SECRET: 1WFGKe43InTlUaHc34BvbA5WSvARYWiA
+  CONTENT_API_URL: https://main.content.egamingchain.io
+ingress:
+  className: alb
+  externalDns: true
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: instance
+    alb.ingress.kubernetes.io/inbound-cidrs: ''
+    alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-FS-1-2-Res-2019-08
+    alb.ingress.kubernetes.io/ip-address-type: ipv4
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+    alb.ingress.kubernetes.io/healthcheck-path: /ping
+  hosts:
+    - host: main.ring-office.egamingchain.io
+      paths:
+        - path: /
+          pathType: Prefix
+
+service:
+  type: NodePort
+
+autoscaling:
+  enabled: true
+
+image:
+  pullPolicy: Always

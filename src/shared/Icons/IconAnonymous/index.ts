@@ -1,0 +1,1 @@
+export { IconAnonymous } from './IconAnonymous';

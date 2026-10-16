@@ -1,0 +1,1 @@
+export { IconDeposit } from './IconDeposit';

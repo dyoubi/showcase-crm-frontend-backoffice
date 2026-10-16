@@ -1,0 +1,1 @@
+export { IconDice } from './IconDice';

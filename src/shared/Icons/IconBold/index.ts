@@ -1,0 +1,1 @@
+export { IconBold } from './IconBold';

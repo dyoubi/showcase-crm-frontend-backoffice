@@ -1,0 +1,1 @@
+export const slugRegex = /^[a-z](-?[a-z])*$/;

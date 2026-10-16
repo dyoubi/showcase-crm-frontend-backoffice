@@ -1,0 +1,1 @@
+export { IconClick } from './IconClick';

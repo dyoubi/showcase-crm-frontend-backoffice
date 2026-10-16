@@ -1,0 +1,1 @@
+export { IconBitcoin } from './IconBitcoin';

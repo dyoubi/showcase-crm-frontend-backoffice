@@ -1,0 +1,1 @@
+export { IconGamepad } from './IconGamepad';

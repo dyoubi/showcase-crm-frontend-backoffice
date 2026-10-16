@@ -1,0 +1,1 @@
+export { IconAlignLeft } from './IconAlignLeft';

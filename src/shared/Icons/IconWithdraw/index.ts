@@ -1,0 +1,1 @@
+export { IconWithdraw } from './IconWithdraw';

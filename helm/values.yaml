@@ -1,0 +1,59 @@
+envVars:
+  EXPOSE_SOURCEMAPS: '1'
+  AUTH_API_URL: 'https://develop.authentication.egamingchain.io'
+  CASINO_API_URL: 'https://develop.casino.egamingchain.io'
+  COINS_API_URL: https://develop.coins.egamingchain.io
+  CUSTOMER_SERVICE_API_URL: 'https://develop.cs.egamingchain.io'
+  FINANCE_API_URL: 'https://develop.finance.egamingchain.io'
+  MEDIA_API_URL: 'https://media-server.egamingchain.io'
+  OPERATOR_API_URL: 'https://develop.operator.egamingchain.io'
+  CLOUDFARE_ACCESS_CLIENT_ID: ''
+  CLOUDFARE_ACCESS_CLIENT_SECRET: ''
+  CONTENT_API_URL: 'https://develop.content.egamingchain.io'
+
+replicaCount: 1
+
+image:
+  repository: ''
+  pullPolicy: Always
+  tag: latest
+
+imagePullSecrets: []
+nameOverride: ''
+fullnameOverride: ''
+
+podAnnotations: {}
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+resources:
+  limits:
+    cpu: 250m
+    memory: 256Mi
+  requests:
+    cpu: 50m
+    memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

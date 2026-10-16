@@ -1,0 +1,1 @@
+export { IconRecommend } from './IconRecommend';

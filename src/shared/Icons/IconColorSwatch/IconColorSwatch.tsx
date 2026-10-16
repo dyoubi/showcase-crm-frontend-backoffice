@@ -1,0 +1,31 @@
+import { memo } from 'react';
+
+import { useIconColor, useIconSize, useIconStrokeWidth } from '../hooks';
+import * as t from '../types';
+
+export const IconColorSwatch = memo(({ color, size, ...rest }: t.IconProps) => {
+  const iconColor = useIconColor(color);
+  const iconSize = useIconSize(size);
+  const iconStrokeWidth = useIconStrokeWidth(size);
+
+  return (
+    <svg
+      fill="none"
+      height={iconSize}
+      stroke={iconColor}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={iconStrokeWidth}
+      viewBox="0 0 24 24"
+      width={iconSize}
+      xmlns="http://www.w3.org/2000/svg"
+      {...rest}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2" />
+      <path d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9" />
+      <path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12" />
+      <path d="M17 17l0 .01" />
+    </svg>
+  );
+});

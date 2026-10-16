@@ -1,0 +1,1 @@
+export { IconEmail } from './IconEmail';

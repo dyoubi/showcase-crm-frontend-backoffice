@@ -1,0 +1,1 @@
+export { IconBet } from './IconBet';

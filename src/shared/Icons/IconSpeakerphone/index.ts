@@ -1,0 +1,1 @@
+export { IconSpeakerphone } from './IconSpeakerphone';

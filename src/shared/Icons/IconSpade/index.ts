@@ -1,0 +1,1 @@
+export { IconSpade } from './IconSpade';

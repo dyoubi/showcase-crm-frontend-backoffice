@@ -1,0 +1,1 @@
+export { LogoBitplay } from './LogoBitplay';

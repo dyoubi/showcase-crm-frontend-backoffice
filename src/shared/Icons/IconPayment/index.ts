@@ -1,0 +1,1 @@
+export { IconPayment } from './IconPayment';

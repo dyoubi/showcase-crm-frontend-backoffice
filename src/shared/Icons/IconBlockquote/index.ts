@@ -1,0 +1,1 @@
+export { IconBlockquote } from './IconBlockquote';

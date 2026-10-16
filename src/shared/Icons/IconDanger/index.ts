@@ -1,0 +1,1 @@
+export { IconDanger } from './IconDanger';

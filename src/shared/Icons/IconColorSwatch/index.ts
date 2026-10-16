@@ -1,0 +1,1 @@
+export { IconColorSwatch } from './IconColorSwatch';
